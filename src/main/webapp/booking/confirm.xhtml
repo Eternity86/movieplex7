@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='windows-1251' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -12,23 +12,23 @@
             <ui:define name="content">
                 <c:choose>
                     <c:when test="#{booking.theater == 'none'}">
-                        <h2>Кинотеатр не найден, выберите другой сеанс!</h2>
+                        <h2>No theater found, choose a different time!</h2>
                         <h:form>
-                            Название фильма: #{booking.movieName}<p/>
-                            Начало сеанса: #{booking.startTime}<p/>
+                            Movie name: #{booking.movieName}<p/>
+                            Starts at: #{booking.startTime}<p/>
                             <h:commandButton id="back" value="Back" 
                                              action="showtimes"/>
                         </h:form>                   
                     </c:when>
                     <c:otherwise>
-                        <h2>Забронировать?</h2>
+                        <h2>Confirm?</h2>
                         <h:form>
-                            Название фильма: #{booking.movieName}<p/>
-                            Начало сеанса: #{booking.startTime}<p/>
-                            Кинотеатр: #{booking.theater}<p/>
-                            <p/><h:commandButton id="next" value="Да"
+                            Movie name: #{booking.movieName}<p/>
+                            Starts at: #{booking.startTime}<p/>
+                            Theater: #{booking.theater}<p/>
+                            <p/><h:commandButton id="next" value="Book"
                                                  action="print" />
-                            <h:commandButton id="back" value="Назад"
+                            <h:commandButton id="back" value="Back"
                                                  action="showtimes" />
                         </h:form>
                     </c:otherwise>

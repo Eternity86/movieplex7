@@ -1,4 +1,4 @@
-<?xml version='1.0' encoding='UTF-8' ?>
+<?xml version='1.0' encoding='windows-1251' ?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml"
       xmlns:ui="http://xmlns.jcp.org/jsf/facelets"
@@ -11,8 +11,8 @@
         <ui:composition template="./../WEB-INF/template.xhtml">
 
             <ui:define name="content">
-                <h2>Расписание сеансов: <font color="red">#{booking.movieName}</font></h2>
-                <h:form>
+                <h2>Show Timings for: <font color="red">#{booking.movieName}</font></h2>
+                <h:form prependId="false">
                     <h:selectOneRadio value="{booking.startTime}"
                                       layout="pageDirection"
                                       required="true">
@@ -21,8 +21,8 @@
                                           itemLabel="#{s.startTime}"/>
                         </c:forEach>                          
                     </h:selectOneRadio>
-                    <h:commandButton value="Подтвердить" action="confirm" />
-                    <h:commandButton id="back" value="Назад" action="booking" immediate="true"
+                    <h:commandButton value="Confirm" action="confirm" />
+                    <h:commandButton id="back" value="Back" action="booking" immediate="true" />
                 </h:form>
             </ui:define>
 
