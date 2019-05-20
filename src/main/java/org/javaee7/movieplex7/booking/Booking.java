@@ -5,6 +5,7 @@
  */
 package org.javaee7.movieplex7.booking;
 
+import java.io.Serializable;
 import java.util.List;
 import java.util.StringTokenizer;
 import javax.faces.flow.FlowScoped;
@@ -21,13 +22,13 @@ import org.javaee7.movieplex7.entities.ShowTiming;
  */
 @Named
 @FlowScoped("booking")
-public class Booking {
+public class Booking implements Serializable {
     @PersistenceContext
     EntityManager em;
     
-    private int movieId;
-    private String startTime;
-    private int startTimeId;
+    int movieId;
+    String startTime;
+    int startTimeId;
     
     public int getMovieId() {
         return movieId;
