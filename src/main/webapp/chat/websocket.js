@@ -33,7 +33,7 @@ function onClose() {
 }
 function onMessage(evt) {
   writeToScreen("RECEIVED: " + evt.data);
-  if (evt.data.indexOf("joined") !== ?1) {
+  if (evt.data.indexOf("joined") !== -1) {
     users.innerHTML += 
       evt.data.substring(0, evt.data.indexOf(" joined")) + "\n";
   } else {
