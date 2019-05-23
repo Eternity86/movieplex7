@@ -49,4 +49,8 @@ public class MovieClientBean {
         return m;
     }
     
+    public void deleteMovie() {
+        target.path("{movieId").resolveTemplate("movieId", bean.getMovieId()).request().delete();
+    }
+    
 }
